@@ -7,6 +7,8 @@
 #define WINDOW_WIDTH 1200
 #define WINDOW_HEIGHT 600
 
+#define BASE_SCALE 300
+
 std::string format(float f, int digits) {
     std::ostringstream ss;
     ss.precision(digits);
@@ -26,7 +28,7 @@ public:
         points.setPrimitiveType(sf::LinesStrip);
         for(float i = 0; i < WINDOW_WIDTH; ++i)
         {   
-            sf::Vertex point = sf::Vector2f(i, -300 * sin(i * M_PI / 300) + WINDOW_HEIGHT / 2);
+            sf::Vertex point = sf::Vector2f(i, -WINDOW_HEIGHT / 2 * sin(i * M_PI / BASE_SCALE) + WINDOW_HEIGHT / 2);
             point.color = pointsColor;
             points.append(point);
         }
@@ -35,7 +37,7 @@ public:
     void update()
     {
         for(float i = 0; i < WINDOW_WIDTH; ++i)
-            points[i].position = sf::Vector2f(i, -300 * sin(i * M_PI / 300) + WINDOW_HEIGHT / 2);
+            points[i].position = sf::Vector2f(i, -WINDOW_HEIGHT / 2 * sin(i * M_PI / BASE_SCALE) + WINDOW_HEIGHT / 2);
     }
 
     void draw(sf::RenderWindow* window)
