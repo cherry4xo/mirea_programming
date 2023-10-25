@@ -18,7 +18,10 @@ int main(int argc, char** argv)
                 std::cout << "x has no roots\n";
         }
         else
-            std::cout << "x = " << static_cast<float>(-c) / static_cast<float>(b) << std::endl;
+            if (c == 0)
+                std::cout << "x = 0" << std::endl;
+            else    
+                std::cout << "x = " << static_cast<float>(-c) / static_cast<float>(b) << std::endl;
     }
     else
     {

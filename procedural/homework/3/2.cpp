@@ -15,9 +15,9 @@ double foo(double S, double m, double n) {
 
 int main(int argc, const char** argv)
 {
-    float s, p, n;
-    std::cin >> s >> p >> n;
-    std::cout << foo(s, p, n);
+    float s, m, n;
+    std::cin >> s >> m >> n;
+    std::cout << foo(s, m, n) << std::endl;
 
     return 0;
 }
