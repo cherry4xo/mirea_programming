@@ -98,7 +98,7 @@ void introsort(char a[], char *begin, char *end, int maxdepth)
  
 int main()
 {
-    char a[] = { 'f', '1', 'o', 'a', 'w', 'b', 'd', 'q', '7', '3', 'n', 'm', 'z', 'x', 'c',};
+    char a[] = { 'f', '1', 'o', 'a', 'w', 'b', 'd', 'q', '7', '3', 'n', 'm', 'z', 'x', 'c'};
     int n = sizeof(a) / sizeof(a[0]);
  
     // получаем максимальную глубину
